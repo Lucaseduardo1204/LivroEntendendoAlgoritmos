@@ -85,6 +85,27 @@ def calcular_fatorial(n):                           # Cria a função calcular_f
 
 print(calcular_fatorial(5))
 
+# Exemplo:
+
+array_de_numeros = [1,2,3]
+
+# Para somar todos os números e retornar o valor total seria simples
+# de ser feito porém, como seria feito com funções recursivas?
+
+# PASSO 1: Descobrir o caso base. Qual seria o array mais simples que
+# poderíamos obter? (um array com 0 ou 1 elementos)
+
+# CasoBase:  [ ] -> 0 elementos a soma é igual a 0
+#            [7] -> 1 elemento a soma é esse elemento (7)
+
+# PASSO 2: A cada recursão, devemos chegar mais próximos do caso-base
+
+def soma_recursiva(arr):
+    if not arr:
+        return 0
+
+    return arr.pop(0) + soma_recursiva(arr)
+
 
 
 
